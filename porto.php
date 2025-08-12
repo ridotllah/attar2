@@ -271,6 +271,7 @@
       <a href="#about">About</a>
       <a href="#achievement">Achievement</a>
       <a href="#contact">Contact</a>
+      <a href="login.php">Login</a>
     </nav>
   </header>
 
@@ -323,7 +324,7 @@
       <div class="contact-info">
         <p>Email: <a href="mailto:akhtar@iqis.sch.id">akhtar@iqis.sch.id</a></p>
         <p>Instagram: <a href="https://instagram.com/akhtarsyh" target="_blank">@akhtarsyh</a></p>
-        <p>GitHub: <a href="https://github.com/akhtarsyah10" target="_blank">akhtarsyah10</a></p>
+        <p>GitHub: <a href="https://github.com/akhtarsyah10" target="_blank">akhtarsyah10gmail.com</a></p>
       </div>
       <div class="contact-form">
         <p>Ingin menghubungi saya? Kirim pesan langsung!</p>

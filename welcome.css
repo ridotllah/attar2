@@ -1,0 +1,108 @@
+:root{
+  --bg:#f4f6fb;
+  --card:#ffffff;
+  --accent:#1e88e5;
+  --muted:#6b7280;
+  --text:#0f172a;
+}
+*{box-sizing:border-box}
+body{
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:var(--text);
+  margin:0;
+}
+
+/* Login */
+.login-page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+}
+.login-card{
+  width:320px;
+  padding:1.25rem;
+  border-radius:12px;
+  background:var(--card);
+  box-shadow:0 8px 24px rgba(16,24,40,0.06);
+}
+.login-card h2{margin-bottom:0.75rem}
+.login-card label{display:block;margin-bottom:0.5rem;font-size:0.9rem}
+.login-card input{
+  width:100%;
+  padding:0.5rem;
+  border:1px solid #e6e9ef;
+  border-radius:8px;
+  margin-top:0.25rem;
+}
+.login-card .actions{margin-top:1rem;display:flex;justify-content:flex-end}
+.login-card button{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:0.5rem 0.9rem;
+  border-radius:8px;
+  cursor:pointer;
+}
+.login-card .muted{font-size:0.8rem;color:var(--muted);margin-top:0.5rem}
+
+/* App layout */
+.app{display:flex;min-height:100vh}
+.sidebar{
+  width:220px;
+  padding:1.25rem;
+  background:#0b1220;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.brand{font-weight:700;font-size:1.05rem;margin-bottom:1rem}
+.nav{display:flex;flex-direction:column;gap:0.25rem}
+.nav-item{
+  display:block;
+  padding:0.55rem 0.75rem;
+  border-radius:8px;
+  color:#cbd5e1;
+  text-decoration:none;
+}
+.nav-item.active, .nav-item:hover{
+  background:rgba(255,255,255,0.06);
+  color:#fff;
+}
+.sidebar-foot{font-size:0.85rem;color:#9aa6bd;margin-top:1rem}
+.sidebar-foot .logout{display:inline-block;margin-top:0.5rem;color:var(--accent);text-decoration:none}
+
+.main{flex:1;display:flex;flex-direction:column;}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;background:transparent}
+.content{padding:1.25rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+.card{
+  background:var(--card);
+  padding:1rem;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(16,24,40,0.06);
+}
+.table{width:100%;border-collapse:collapse;margin-top:0.5rem}
+.table th,.table td{padding:0.5rem 0.6rem;border-bottom:1px solid #eef2f7;text-align:left}
+.actions button{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:0.5rem 0.7rem;
+  border-radius:8px;
+  cursor:pointer;
+}
+.footer{padding:1rem;text-align:center;color:var(--muted)}
+
+/* responsive */
+@media (max-width:800px){
+  .sidebar{display:none}
+  .app{flex-direction:column}
+  .topbar{padding:0.75rem}
+}
+
+/* small helpers */
+.muted{color:var(--muted)}
