@@ -13,14 +13,11 @@ if (!isset($_SESSION['user'])) {
     <link rel="stylesheet" href="welcome.css">
 </head>
 <body>
-    <h1>Anda berhasil login</h1>
 
     <?php
 // File: index.php
 // Simple PHP dashboard (no DB) with pages: Home, Nilai, Kehadiran, Jadwal, Pengaturan, Laporan
 // Put this file in your webroot and create a file named styles.css (content provided below).
-
-session_start();
 
 // Simple fake auth for demo
 if (!isset($_SESSION['user'])) {
