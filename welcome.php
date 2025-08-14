@@ -153,14 +153,77 @@ if (!in_array($page, $pages)) $page = 'home';
           break;
 
           case 'laporan':
-            ?>
-            <div class="card">
-              <h3>Laporan</h3>
-              <p>Ekspor laporan ke PDF / CSV (fitur contoh).</p>
-              <button disabled>Export PDF (demo)</button>
-            </div>
-            <?php
-          break;
+?>
+    <h3>Laporan Siswa</h3>
+
+    <h4>Tambah Siswa Baru</h4>
+    <form action="tambah.php" method="post" enctype="multipart/form-data">
+        <table border="0" cellpadding="5" cellspacing="0">
+            <tr>
+                <td><label for="nama">Nama:</label></td>
+                <td><input type="text" name="nama" id="nama" required></td>
+            </tr>
+            <tr>
+                <td><label for="nis">NIS:</label></td>
+                <td><input type="text" name="nis" id="nis" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" name="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="jurusan">Jurusan:</label></td>
+                <td>
+                    <select name="jurusan" id="jurusan" required>
+                        <option value="">Pilih Jurusan</option>
+                        <option value="Teknik Informatika">Teknik Informatika</option>
+                        <option value="Sistem Informasi">Sistem Informasi</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="gambar">Gambar Profil:</label></td>
+                <td><input type="file" name="gambar" id="gambar" accept="image/*"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">Tambah Siswa</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <h4>Daftar Siswa</h4>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>No.</th>
+            <th>Aksi</th>
+            <th>Gambar</th>
+            <th>Nama</th>
+            <th>NIS</th>
+            <th>Email</th>
+            <th>Jurusan</th>
+        </tr>
+        <?php
+        $i = 1;
+        $siswa = isset($siswa) ? $siswa : [];
+        foreach ($siswa as $row) :
+        ?>
+        <tr>
+            <td><?= $i; ?></td>
+            <td>
+                <a href="ubah.php?id=<?= $row['id']; ?>">ubah</a>
+                <a href="hapus.php?id=<?= $row['id']; ?>" onclick="return confirm('Yakin ingin menghapus?')">hapus</a>
+            </td>
+            <td><img src="img/<?= htmlspecialchars($row['gambar']); ?>" width="50"></td>
+            <td><?= htmlspecialchars($row['nama']); ?></td>
+            <td><?= htmlspecialchars($row['nis']); ?></td>
+            <td><?= htmlspecialchars($row['email']); ?></td>
+            <td><?= htmlspecialchars($row['jurusan']); ?></td>
+        </tr>
+        <?php $i++; endforeach; ?>
+    </table>
+<?php
+    break;
 
           case 'pengaturan':
             ?>
@@ -187,5 +250,11 @@ if (!in_array($page, $pages)) $page = 'home';
   </div>
 <?php endif; ?>
 </body>
+
+   <div class="from">
+
+
+   </div>
+  
 </html>
 
