@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Memasak Telur</title>
+</head>
+<body>
+  <h2>Program Memasak Telur</h2>
+
+  <script>
+    // Mulai program
+    alert("Mulai!");
+
+    // Siapkan telur
+    alert("Siapkan telur yang akan dimasak");
+
+    // Pilihan jenis masakan telur
+    let pilihan = prompt(
+      "Pilih cara memasak telur:\n1. Orak-arik\n2. Ceplok\n3. Rebus\nMasukkan angka pilihan:"
+    );
+
+    switch(pilihan) {
+      case "1": // Orak-arik
+        alert("Langkah memasak Orak-arik:");
+        alert("1. Pecahkan telurnya ke dalam wadah");
+        alert("2. Kocok telur dan tambahkan bumbu sesuai selera");
+        alert("3. Panaskan penggorengan");
+        alert("4. Masukkan kocokan telur ke penggorengan");
+        alert("5. Aduk telur hingga menjadi orak-arik");
+        break;
+
+      case "2": // Ceplok
+        alert("Langkah memasak Ceplok:");
+        alert("1. Panaskan penggorengan yang telah diisi minyak");
+        alert("2. Pecahkan telur di atas penggorengan");
+        alert("3. Tunggu hingga matang");
+        break;
+
+      case "3": // Rebus
+        alert("Langkah memasak Rebus:");
+        alert("1. Didihkan air di dalam panci");
+        alert("2. Masukkan telur utuh ke dalam panci");
+        alert("3. Tunggu beberapa menit sampai telurnya matang");
+        break;
+
+      default:
+        alert("Pilihan tidak valid. Silakan pilih 1, 2, atau 3.");
+    }
+
+    // Hidangkan
+    alert("Telur siap untuk dihidangkan!");
+    alert("Selesai.");
+  </script>
+</body>
+</html>
