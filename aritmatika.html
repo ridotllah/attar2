@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let resault = 1 + 2; // 2
+        document.writeln("<p> 1 + 2 = " + resault + "</p>");
+        let originalResault = resault; // 3
+
+        resault = resault - 1; // 2
+        document.writeln("<p>" + originalResault + " - 1 =" + resault + "</p>");
+        originalResault = resault; // 2
+
+        resault = resault * 2; // 4
+        document.writeln("<p>" + originalResault + " * 2 = " + resault + "</p>")
+        </script>
+</body>
+</html>

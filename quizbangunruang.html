@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menghitung Luas Persegi & Segitiga</title>
+</head>
+<body>
+  <script>
+    // a1: masukkan nilai pertama
+    let a1 = parseFloat(prompt("Masukkan nilai pertama (misalnya sisi atau alas):"));
+    
+    // a2: masukkan nilai kedua
+    let a2 = parseFloat(prompt("Masukkan nilai kedua (misalnya tinggi):"));
+    
+    // a3: memilih antara luas persegi atau luas segitiga
+    let a3 = prompt("Pilih bentuk yang ingin dihitung: \n1. Persegi \n2. Segitiga");
+    
+    let hasil;
+
+    // a4: hasil pilihannya
+    if (a3 == "1") {
+      hasil = a1 * a2;
+      alert("Kamu memilih Persegi.\nLuas Persegi = " + hasil);
+    } else if (a3 == "2") {
+      hasil = 0.5 * a1 * a2;
+      alert("Kamu memilih Segitiga.\nLuas Segitiga = " + hasil);
+    } else {
+      alert("Pilihan tidak valid! Silakan pilih 1 atau 2.");
+    }
+  </script>
+</body>
+</html>

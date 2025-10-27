@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tipe Data Array</title>
+</head>
+<body>
+  <script>
+    // Array kosong
+    let arrayKosong = [];
+
+    // Array berisi nama
+    let arrayNama = ["rajie", "al-qadri", "Anwar"];
+
+    // Array menggunakan const
+    const names = [];
+
+    // Tambahkan data ke array
+    names.push("rajie");
+    names.push("al-qadri", "Anwar");
+    names.push("Budi", "Joko", "Rudi");
+
+    console.table(names);
+
+    // Akses elemen berdasarkan index
+    console.info(names[0]);
+    console.info(names[1]);
+    console.info(names[2]);
+
+    // Mengubah isi array
+    names[0] = "Jago Komputer";
+    names[1] = "Hafidz Quran";
+    names[2] = "IQIS";
+
+    console.table(names);
+
+    // Menghapus elemen
+    delete names[3];
+    console.table(names);
+
+    // Menambahkan data baru
+    names.push("rajie Lagi");
+    console.table(names);
+
+    // Mengubah lagi elemen tertentu
+    names[3] = "Diubah Lagi";
+    console.table(names);
+
+    // Menambahkan data angka
+    names.push(1, 2, 3, 4, 5);
+    console.table(names);
+
+    // Menambahkan data array baru di dalamnya
+    names.push(["rajie", "al-qadri", "Anwar"]);
+    console.table(names);
+  </script>
+</body>
+</html>

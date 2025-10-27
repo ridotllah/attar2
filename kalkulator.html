@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Sederhana</title>
+</head>
+<body>
+  <script>
+    let choice;
+    do {
+      // Menampilkan menu
+      choice = parseInt(prompt(
+        "=== Kalkulator Sederhana ===\n" +
+        "1. Penjumlahan\n" +
+        "2. Pengurangan\n" +
+        "3. Perkalian\n" +
+        "4. Pembagian\n" +
+        "5. Faktorial\n" +
+        "6. Keluar\n" +
+        "Pilih operasi (1-6):"
+      ));
+
+      // Validasi menu
+      while (isNaN(choice) || choice < 1 || choice > 6) {
+        choice = parseInt(prompt("Pilihan tidak valid! Masukkan angka 1-6:"));
+      }
+
+      if (choice >= 1 && choice <= 4) {
+        // Input dua angka
+        let num1 = parseFloat(prompt("Masukkan angka pertama:"));
+        let num2 = parseFloat(prompt("Masukkan angka kedua:"));
+
+        // Validasi pembagian dengan nol
+        while (choice === 4 && num2 === 0) {
+          num2 = parseFloat(prompt("Pembagi tidak boleh nol! Masukkan angka kedua lagi:"));
+        }
+
+        let hasil;
+        switch (choice) {
+          case 1:
+            hasil = num1 + num2;
+            alert(`Hasil Penjumlahan: ${hasil}`);
+            break;
+          case 2:
+            hasil = num1 - num2;
+            alert(`Hasil Pengurangan: ${hasil}`);
+            break;
+          case 3:
+            hasil = num1 * num2;
+            alert(`Hasil Perkalian: ${hasil}`);
+            break;
+          case 4:
+            hasil = num1 / num2;
+            alert(`Hasil Pembagian: ${hasil}`);
+            break;
+        }
+      } 
+      else if (choice === 5) {
+        // Faktorial
+        let n = parseInt(prompt("Masukkan angka untuk faktorial:"));
+        while (n < 0 || isNaN(n)) {
+          n = parseInt(prompt("Angka tidak boleh negatif! Masukkan lagi:"));
+        }
+
+        let hasil = 1;
+        for (let i = 1; i <= n; i++) {
+          hasil *= i;
+        }
+
+        alert(`Hasil faktorial dari ${n} adalah ${hasil}`);
+      } 
+      else if (choice === 6) {
+        alert("Terima kasih telah menggunakan kalkulator!");
+      }
+
+    } while (choice !== 6);
+  </script>
+</body>
+</html>

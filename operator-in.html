@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      // Objek pertama
+      const person = {
+        firstName: "rajie",
+        lastName: "anwar",
+      };
+
+      if ("firstName" in person) {
+        alert(`Hello ${person.firstName}`);
+      } else {
+        alert("Hello");
+      }
+
+      // Objek kedua
+      const student = {
+        firstName: "rajie",
+        middleName: undefined,
+        lastName: "anwar",
+      };
+
+      if ("middleName" in student) {
+        alert(`Hello ${student.middleName}`);
+      } else {
+        alert("Hello Student");
+      }
+
+      // Array dan operator in
+      const names = [null, "al qadri", null];
+      const result = 0 in names;
+      document.writeln(`<p>${result}</p>`);
+    </script>
+  </body>
+</html>

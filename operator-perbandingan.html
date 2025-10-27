@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Operator Perbandingan</title>
+</head>
+<body>
+  <script>
+    let result = 5 == "5"; 
+    document.writeln("<p>" + result + "</p>"); // true → hanya membandingkan nilai
+
+    result = 5 === "5";
+    document.writeln("<p>" + result + "</p>"); // false → membandingkan nilai + tipe data
+
+    result = 5 > 10;
+    document.writeln("<p>" + result + "</p>"); // false → karena 5 tidak lebih besar dari 10
+
+    result = 5 < 10;
+    document.writeln("<p>" + result + "</p>"); // true → karena 5 memang lebih kecil dari 10
+  </script>
+</body>
+</html>
